@@ -8,8 +8,13 @@ Arabic text.
 ```
 
 It supports timezone conversion, optional day-period labels, and both library
-and command-line use. Python 3.9 or newer is required, and the test matrix
-currently covers CPython 3.9 through the Python 3.15 prerelease.
+and command-line use. Python 3.9 or newer is required. The test matrix covers
+CPython 3.9 through 3.14 and the current Python 3.15 prerelease.
+
+The package code uses only the Python standard library. On non-Windows
+platforms it installs no Python runtime dependencies and uses the system
+timezone database. On Windows, it conditionally installs `tzdata` because an
+IANA timezone database may not be available from the operating system.
 
 ## Installation
 
@@ -52,6 +57,15 @@ format_time(value, timezone="Asia/Tokyo")
 # العاشرة تمامًا ليلًا
 ```
 
+The `timezone` argument also accepts a `datetime.tzinfo` object:
+
+```python
+from zoneinfo import ZoneInfo
+
+format_time(value, timezone=ZoneInfo("Africa/Cairo"))
+# الثالثة تمامًا عصرًا
+```
+
 The selected timezone is applied before both the clock value and its day-period
 label are calculated. A naive `datetime` has no source offset, so supplying a
 timezone interprets its existing fields as wall-clock time in that timezone.
@@ -75,6 +89,7 @@ assemble their own output.
 esa3akam
 esa3akam --timezone Asia/Riyadh
 esa3akam --no-day-period
+python -m esa3akam --timezone Africa/Cairo
 ```
 
 The original script remains available when running from the source repository:
@@ -106,4 +121,3 @@ Run the tests directly from a source checkout:
 ```bash
 PYTHONPATH=src python3 -m unittest discover -v
 ```
-
