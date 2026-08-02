@@ -1,0 +1,3 @@
+include CHANGELOG.md
+include time_in_arabic.py
+recursive-include tests *.py

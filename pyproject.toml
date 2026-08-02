@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "esa3akam"
+version = "0.1.0rc1"
+description = "Render timezone-aware clock times as grammatically correct Arabic text"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "marwanyassin" },
+]
+keywords = ["arabic", "datetime", "localization", "time", "timezone"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: Arabic",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Software Development :: Internationalization",
+]
+dependencies = [
+    "tzdata; platform_system == 'Windows'",
+]
+
+[project.urls]
+Homepage = "https://github.com/Marware/esa3akam"
+Issues = "https://github.com/Marware/esa3akam/issues"
+Source = "https://github.com/Marware/esa3akam"
+
+[project.scripts]
+esa3akam = "esa3akam.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+esa3akam = ["py.typed"]
