@@ -107,6 +107,3 @@ Run the tests directly from a source checkout:
 PYTHONPATH=src python3 -m unittest discover -v
 ```
 
-The project is licensed under Apache-2.0. It was originally made for fun for
-the Facebook page
-[يا عمو الساعة كام؟](https://www.facebook.com/ya3amoelsa3akam/).
