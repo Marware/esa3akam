@@ -11,6 +11,11 @@ It supports timezone conversion, optional day-period labels, and both library
 and command-line use. Python 3.9 or newer is required. The test matrix covers
 CPython 3.9 through 3.14 and the current Python 3.15 prerelease.
 
+The package code uses only the Python standard library. On non-Windows
+platforms it installs no Python runtime dependencies and uses the system
+timezone database. On Windows, it conditionally installs `tzdata` because an
+IANA timezone database may not be available from the operating system.
+
 ## Installation
 
 ```bash
