@@ -121,3 +121,8 @@ Run the tests directly from a source checkout:
 ```bash
 PYTHONPATH=src python3 -m unittest discover -v
 ```
+
+Production distributions are built by GitHub Actions from a `v<version>`
+release tag pointing to `main`. Publishing uses PyPI Trusted Publishing and a
+protected GitHub environment, so the repository stores no long-lived PyPI API
+token.
