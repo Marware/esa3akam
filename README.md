@@ -125,4 +125,5 @@ PYTHONPATH=src python3 -m unittest discover -v
 Production distributions are built by GitHub Actions from a `v<version>`
 release tag pointing to `main`. Publishing uses PyPI Trusted Publishing and a
 protected GitHub environment, so the repository stores no long-lived PyPI API
-token.
+token. The release workflow requires a GitHub-verified annotated tag and builds
+with a hash-locked toolchain.

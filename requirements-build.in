@@ -1,0 +1,4 @@
+# Build-only dependencies for the Linux GitHub Actions release job.
+build==1.5.0
+setuptools==83.0.0
+wheel==0.47.0

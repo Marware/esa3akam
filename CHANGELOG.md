@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Update artifact transfer actions to their Node 24-native releases.
+- Require GitHub-verified annotated tags for production releases.
+- Build release artifacts with a hash-locked toolchain.
+
 ## 0.1.0 - 2026-08-03
 
 - Promote the tested release candidate to the first stable release.
