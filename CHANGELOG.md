@@ -1,6 +1,12 @@
 # Changelog
 
-## 0.1.0rc1
+## 0.1.0 - 2026-08-03
+
+- Promote the tested release candidate to the first stable release.
+- Publish releases from signed GitHub tags through PyPI Trusted Publishing.
+- Adopt SPDX license metadata for current packaging tools.
+
+## 0.1.0rc1 - 2026-08-02
 
 - Port the original Python 2.7 script to a typed Python 3 package.
 - Add timezone-aware `format_time` and `format_now` APIs.

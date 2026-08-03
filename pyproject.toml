@@ -1,14 +1,15 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "esa3akam"
-version = "0.1.0rc1"
+version = "0.1.0"
 description = "Render timezone-aware clock times as grammatically correct Arabic text"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { file = "LICENSE" }
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 authors = [
     { name = "marwanyassin" },
 ]
@@ -16,7 +17,6 @@ keywords = ["arabic", "datetime", "localization", "time", "timezone"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: Apache Software License",
     "Natural Language :: Arabic",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
